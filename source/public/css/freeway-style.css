@@ -4,11 +4,11 @@ body {
 
 #compute-screen {
   border: 2px solid black;
-  display: flex;
 }
 
 section.main {
-  width: 800px;
+  width: 1000px;
+  height: 300px;
   margin: auto;
 }
 

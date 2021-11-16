@@ -12,53 +12,92 @@
 
     <!-- Compute Screen -->
     <section class="main hidden" id="compute-screen">
-      <h1>Computing the average travel time and total volume for a station</h1>
+      <h1 style="text-align:center">Computing the average travel time and total volume for a station</h1>
+	  
       <section id="inputs">
-		<form>
-			<strong>Input:  </strong><br>
-			<label for="startdate">Start date/time</label><br>
-			<input type="text" id="startdate" name="startdate">
-			<label for="enddate">End date/time</label><br>
-			<input type="text" id="enddate" name="enddate">
-			<label for="station">Station</label><br>
-			<input type="text" id="station" name="station">
+		<form style="float:left;margin-left:17%">
+			<div style="float:left;margin-right:20px;margin-top:20px">
+				<b>Input:</b>
+			</div>
+			
+			<div style="float:left;margin-right:20px;text-align:center">
+				<label for="startdate">Start date/time</label><br>
+				<input type="datetime-local" id="startdate" name="startdate">
+			</div>
+			
+			<div style="float:left;margin-right:20px;text-align:center">
+				<label for="enddate">End date/time</label><br>
+				<input type="datetime-local" id="enddate" name="enddate">
+			</div>
+			
+			<div style="float:left;margin-right:20px;text-align:center">
+				<label for="station">Station</label><br>
+				<input type="text" id="station" name="station">
+			</div>
+			<br style="clear:both;" />
 		</form>
       </section>
+	  
 	  <section id="submit">
 		<form>
-            <input type="submit" value="Submit"><br>
+            <input type="submit" value="Submit" style="margin-left: 46%;margin-top:8%">
 		</form>
       </section>
+	  
 	  <section id="outputs">
-		<form>
-			<strong>Output:  </strong><br>
-			<label for="traveltime">Travel Time</label><br>
-			<input type="text" id="traveltime" name="traveltime" readonly value="">
-			<label for="enddate">Volume</label><br>
-			<input type="text" id="volume" name="volume" readonly value="">
+		<form style="float:left;margin-left:17%">
+			<div style="float:left;margin-right:20px;margin-top:20px">
+				<b>Output:</b>
+			</div>
+			
+			<div style="float:left;margin-right:20px;text-align:center">
+				<label for="traveltime">Travel Time</label><br>
+				<input type="text" id="traveltime" name="traveltime" readonly value="">
+			</div>
+			
+			<div style="float:left;margin-right:20px;text-align:center">
+				<label for="enddate">Volume</label><br>
+				<input type="text" id="volume" name="volume" readonly value="">
+			</div>
 		</form>
 	  </section>
+	  
     </section>
 
     <!-- Update Screen -->
     <section class="main hidden" id="update-screen">
       <h1>Change location text</h1>
+	  
       <section id="inputs">
 		<form>
-			<strong>Input:  </strong>
-			<label for="stationid">Station id</label><br>
-			<input type="text" id="stationid" name="stationid">
-			<label for="oldname">Old name</label><br>
-			<input type="text" id="oldname" name="oldname">
-			<label for="newname">New name</label><br>
-			<input type="text" id="newname" name="newname">
+			<div style="float:left;margin-right:20px;margin-top:20px">
+				<b>Input:</b>
+			</div>
+			
+			<div style="float:left;margin-right:20px;text-align:center">
+				<label for="stationid">Station id</label><br>
+				<input type="text" id="stationid" name="stationid">
+			</div>
+			
+			<div style="float:left;margin-right:20px;text-align:center">
+				<label for="oldname">Old name</label><br>
+				<input type="text" id="oldname" name="oldname">
+			</div>
+			
+			<div style="float:left;margin-right:20px;text-align:center">
+				<label for="newname">New name</label><br>
+				<input type="text" id="newname" name="newname">
+			</div>
+			
 		</form>
       </section>
+	  
 	  <section id="submit">
 		<form>
             <input type="submit" value="Update"><br>
 		</form>
       </section>
+	  
     </section>
 
   </body>

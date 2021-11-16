@@ -1,7 +1,2 @@
-
-*.csv
-ProjectData-2018/__MACOSX/._ProjectData-2017
-ProjectData-2018/__MACOSX/ProjectData-2017/._.DS_Store
-ProjectData-2018/__MACOSX/ProjectData-2017/._Freeway_Data_Documentation.pdf
-ProjectData-2018/ProjectData-2017/.DS_Store
-ProjectData-2018/ProjectData-2017/Freeway_Data_Documentation.pdf
+ProjectData-2018/*
+source/data/db/*
