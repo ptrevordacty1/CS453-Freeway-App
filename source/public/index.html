@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Freeway App</title>
+    <link rel="stylesheet" href="/css/freeway-style.css">
+    <script src="/js/compute-screen.js" defer></script>
+    <script src="/js/update-screen.js" defer></script>
+    <script src="/js/app.js" defer></script>
+    <script src="/js/main.js" defer></script>
+  </head>
+  <body>
+
+    <!-- Compute Screen -->
+    <section class="main hidden" id="compute-screen">
+      <h1>Computing the average travel time and total volume for a station</h1>
+      <section id="inputs">
+		<form>
+			<strong>Input:  </strong><br>
+			<label for="startdate">Start date/time</label><br>
+			<input type="text" id="startdate" name="startdate">
+			<label for="enddate">End date/time</label><br>
+			<input type="text" id="enddate" name="enddate">
+			<label for="station">Station</label><br>
+			<input type="text" id="station" name="station">
+		</form>
+      </section>
+	  <section id="submit">
+		<form>
+            <input type="submit" value="Submit"><br>
+		</form>
+      </section>
+	  <section id="outputs">
+		<form>
+			<strong>Output:  </strong><br>
+			<label for="traveltime">Travel Time</label><br>
+			<input type="text" id="traveltime" name="traveltime" readonly value="">
+			<label for="enddate">Volume</label><br>
+			<input type="text" id="volume" name="volume" readonly value="">
+		</form>
+	  </section>
+    </section>
+
+    <!-- Update Screen -->
+    <section class="main hidden" id="update-screen">
+      <h1>Change location text</h1>
+      <section id="inputs">
+		<form>
+			<strong>Input:  </strong>
+			<label for="stationid">Station id</label><br>
+			<input type="text" id="stationid" name="stationid">
+			<label for="oldname">Old name</label><br>
+			<input type="text" id="oldname" name="oldname">
+			<label for="newname">New name</label><br>
+			<input type="text" id="newname" name="newname">
+		</form>
+      </section>
+	  <section id="submit">
+		<form>
+            <input type="submit" value="Update"><br>
+		</form>
+      </section>
+    </section>
+
+  </body>
+</html>
