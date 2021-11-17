@@ -44,7 +44,7 @@ class ComputeScreen {
         const params = {
             startdate: this.startdate,
             enddate: this.enddate,
-            station: this.stationInput
+            station: this.station
         }
         const fetchOptions = {
             method: 'post',
@@ -56,6 +56,7 @@ class ComputeScreen {
         };
         const result = await fetch('/save', fetchOptions);
         const json = await result.json();
+        console.log(json);
     }
 
     _saveInputs() {
