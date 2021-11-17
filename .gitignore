@@ -1,2 +1,4 @@
 ProjectData-2018/*
 source/data/db/*
+source/node_modules/*
+source/package-lock.json

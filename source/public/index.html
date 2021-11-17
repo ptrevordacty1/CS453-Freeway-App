@@ -14,38 +14,38 @@
     <section class="main hidden" id="compute-screen">
       <h1 style="text-align:center">Computing the average travel time and total volume for a station</h1>
 	  
-      <section id="inputs">
-		<form style="float:left;margin-left:17%">
+      <section>
+		<form style="float:left;margin-left:17%" id="compute-inputs">
 			<div style="float:left;margin-right:20px;margin-top:20px">
 				<b>Input:</b>
 			</div>
 			
 			<div style="float:left;margin-right:20px;text-align:center">
 				<label for="startdate">Start date/time</label><br>
-				<input type="datetime-local" id="startdate" name="startdate">
+				<input type="datetime-local" id="startdate" name="startdate" value="">
 			</div>
 			
 			<div style="float:left;margin-right:20px;text-align:center">
 				<label for="enddate">End date/time</label><br>
-				<input type="datetime-local" id="enddate" name="enddate">
+				<input type="datetime-local" id="enddate" name="enddate" value="">
 			</div>
 			
 			<div style="float:left;margin-right:20px;text-align:center">
 				<label for="station">Station</label><br>
-				<input type="text" id="station" name="station">
+				<input type="text" id="station" name="station" value="">
 			</div>
 			<br style="clear:both;" />
 		</form>
       </section>
 	  
-	  <section id="submit">
-		<form>
+	  <section>
+		<form id = "compute-submit">
             <input type="submit" value="Submit" style="margin-left: 46%;margin-top:8%">
 		</form>
       </section>
 	  
-	  <section id="outputs">
-		<form style="float:left;margin-left:17%">
+	  <section>
+		<form style="float:left;margin-left:17%" id="compute-outputs">
 			<div style="float:left;margin-right:20px;margin-top:20px">
 				<b>Output:</b>
 			</div>
@@ -56,7 +56,7 @@
 			</div>
 			
 			<div style="float:left;margin-right:20px;text-align:center">
-				<label for="enddate">Volume</label><br>
+				<label for="volume">Volume</label><br>
 				<input type="text" id="volume" name="volume" readonly value="">
 			</div>
 		</form>
@@ -68,8 +68,8 @@
     <section class="main hidden" id="update-screen">
       <h1>Change location text</h1>
 	  
-      <section id="inputs">
-		<form>
+      <section>
+		<form id="update-inputs">
 			<div style="float:left;margin-right:20px;margin-top:20px">
 				<b>Input:</b>
 			</div>
@@ -92,8 +92,8 @@
 		</form>
       </section>
 	  
-	  <section id="submit">
-		<form>
+	  <section>
+		<form id="update-submit">
             <input type="submit" value="Update"><br>
 		</form>
       </section>

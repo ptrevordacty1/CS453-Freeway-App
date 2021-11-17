@@ -2,7 +2,7 @@ class App {
     constructor() {
       const urlPathString = window.location.pathname;
       const parts = urlPathString.split('/');
-      if (parts.length > 2 && parts[1] === 'update') {
+      if (parts.length > 1 && parts[1] === 'update') {
         this._showUpdateScreen();
       } else {
         this._showComputeScreen();

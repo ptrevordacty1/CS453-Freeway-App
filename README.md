@@ -8,3 +8,15 @@
 3. Start MongoDB as a service or on a separate terminal with ```mongod --dbpath data/db```
 4. Start the server with ```node server.js```
 5. Open a browser go to "localhost:3000"
+
+# Importing CSVs to mongodb database
+run the following commands from the 'source' directory:
+
+1. mongoimport --host=127.0.0.1 --db freeway_data --collection freeway_loopdata --drop --type=csv --headerline --ignoreBlanks --file ../ProjectData-2018/ProjectData-2017/freeway_loopdata.csv
+(^this one will take a while, the file is very large)
+
+2. mongoimport --host=127.0.0.1 --db freeway_data --collection freeway_detectors --drop --type=csv --headerline --ignoreBlanks --file ../ProjectData-2018/ProjectData-2017/freeway_detectors.csv
+
+3. mongoimport --host=127.0.0.1 --db freeway_data --collection freeway_stations --drop --type=csv --headerline --ignoreBlanks --file ../ProjectData-2018/ProjectData-2017/freeway_stations.csv
+
+4. mongoimport --host=127.0.0.1 --db freeway_data --collection highways --drop --type=csv --headerline --ignoreBlanks --file ../ProjectData-2018/ProjectData-2017/highways.csv
