@@ -56,6 +56,15 @@ class ComputeScreen {
         };
         const result = await fetch('/save', fetchOptions);
         const json = await result.json();
+        
+        // Update outputs
+        this.traveltimeOutput.readOnly = false;
+        this.traveltimeOutput.value = json.traveltime + " s";
+        this.traveltimeOutput.readOnly = true;
+        
+        this.volumeOutput.readOnly = false;
+        this.volumeOutput.value = json.volume;
+        this.volumeOutput.readOnly = true;
         console.log(json);
     }
 
