@@ -38,7 +38,8 @@ async function onComputeSubmit(req, res) {
     const body = req.body;
 
     const station = await freeway_stations.findOne({locationtext: body['station']});
-    const cursor = await freeway_detectors.find({locationtext: body['station']});
+    const stationid = Number(station['stationid']);
+    const cursor = await freeway_detectors.find({stationid: stationid});
     const startdate = body['startdate'].replace('T', ' ');
     const enddate = body['enddate'].replace('T', ' ');
 
@@ -65,7 +66,6 @@ async function onComputeSubmit(req, res) {
     }
 
     traveltime = (station['length']/(speedSum/volume))*3600
-    console.log(body);
     res.json({n: 1, ok: 1, traveltime: traveltime, volume: volume})
 }
 app.post('/save', jsonParser, onComputeSubmit);
@@ -94,6 +94,13 @@ app.get('*', loadUpdate);
 
 async function onUpdateSubmit(req, res) {
     const body = req.body;
+    const stationid = Number(body['stationid']);
+    const newname = body['newname'];
 
+    const filter = {'stationid' : stationid};
+    const update = {$set: {'locationtext': newname}};
+    const result = await freeway_stations.update(filter, update);
+    res.json({n: 1, ok: 1, result: result});
+    app.post('/update', jsonParser, loadStationNames);
 }
-app.post('/update', jsonParser, onUpdateSubmit);
+app.post('/submit', jsonParser, onUpdateSubmit);

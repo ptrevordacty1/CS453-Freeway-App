@@ -66,7 +66,6 @@ class ComputeScreen {
         this.volumeOutput.readOnly = false;
         this.volumeOutput.value = json.volume;
         this.volumeOutput.readOnly = true;
-        console.log(json);
     }
 
     _saveInputs() {
@@ -82,7 +81,7 @@ class ComputeScreen {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
-            },
+            }
         };
         const result = await fetch('/load', fetchOptions);
         const json = await result.json();

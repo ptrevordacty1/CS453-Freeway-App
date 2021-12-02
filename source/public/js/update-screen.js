@@ -10,7 +10,6 @@ class UpdateScreen {
         // inputs
         this.stationIdInput = document.querySelector('#stationid');
         this.oldNameInput = document.querySelector('#oldname');
-        this._loadStationNames();
         this.newNameInput = document.querySelector('#newname');
 
         // submit
@@ -26,7 +25,7 @@ class UpdateScreen {
         this.newNameInput.addEventListener('keyup', this._saveInputs);
         this.submitForm.addEventListener('submit', this._onSubmit);
 
-        this._saveInputs();
+        this._loadStationNames();
 
         this.containerElement.classList.remove('hidden');
     }
@@ -48,9 +47,10 @@ class UpdateScreen {
             },
             body: JSON.stringify(params)
         };
-        const result = await fetch('/update', fetchOptions);
+        const result = await fetch('/submit', fetchOptions);
         const json = await result.json();
-        
+     
+        this._loadStationNames();
     }
 
     _saveInputs() {
@@ -73,6 +73,6 @@ class UpdateScreen {
         const json = await result.json();
 
         this.stationnames = json.stationnames;
-        console.log(this.stationnames);
+        this._saveInputs();
     }
 }
