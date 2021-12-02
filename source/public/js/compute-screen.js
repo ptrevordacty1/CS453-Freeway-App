@@ -13,6 +13,7 @@ class ComputeScreen {
         this.enddateInput = document.querySelector('#enddate');
         this.stationInput = document.querySelector('#station');
         this.inputForm = document.querySelector('#compute-inputs');
+        this._loadStationNames();
 
         // submit
         this.submitForm =  document.querySelector('#compute-submit');
@@ -72,5 +73,27 @@ class ComputeScreen {
         this.startdate = this.startdateInput.value;
         this.enddate = this.enddateInput.value;
         this.station = this.stationInput.value;
+    }
+
+    async _loadStationNames() {
+
+        const fetchOptions = {
+            method: 'post',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+        };
+        const result = await fetch('/load', fetchOptions);
+        const json = await result.json();
+
+        const names = json.stationnames;
+
+        for(let name in names) {
+            var op = document.createElement("option");
+            op.value = names[name];
+            op.text = names[name];
+            this.stationInput.add(op, null);
+        }        
     }
 }
