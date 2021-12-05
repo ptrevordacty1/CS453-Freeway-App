@@ -22,17 +22,19 @@
 			
 			<div style="float:left;margin-right:20px;text-align:center">
 				<label for="startdate">Start date/time</label><br>
-				<input type="datetime-local" id="startdate" name="startdate" value="">
+				<input type="datetime-local" id="startdate" name="startdate" value="2011-09-15T00:00" min="2011-09-15T00:00" max="2011-11-14T23:59">
 			</div>
 			
 			<div style="float:left;margin-right:20px;text-align:center">
 				<label for="enddate">End date/time</label><br>
-				<input type="datetime-local" id="enddate" name="enddate" value="">
+				<input type="datetime-local" id="enddate" name="enddate" value="2011-09-15T00:01" min="2011-09-15T00:01" max="2011-14-11T23:59">
 			</div>
 			
 			<div style="float:left;margin-right:20px;text-align:center">
 				<label for="station">Station</label><br>
-				<input type="text" id="station" name="station" value="">
+				<select id="station">
+					
+				</select>
 			</div>
 			<br style="clear:both;" />
 		</form>
@@ -82,12 +84,30 @@
 			
 			<div style="float:left;margin-right:20px;text-align:center">
 				<label for="stationid">Station id</label><br>
-				<input type="text" id="stationid" name="stationid">
+				<select id="stationid">
+					<option value=1045>1045</option>
+					<option value=1046>1046</option>
+					<option value=1047>1047</option>
+					<option value=1048>1048</option>
+					<option value=1049>1049</option>
+					<option value=1050>1050</option>
+					<option value=1051>1051</option>
+					<option value=1052>1052</option>
+					<option value=1053>1053</option>
+					<option value=1054>1054</option>
+					<option value=1098>1098</option>
+					<option value=1117>1117</option>
+					<option value=1125>1125</option>
+					<option value=1140>1140</option>
+					<option value=1141>1141</option>
+					<option value=1142>1142</option>
+					<option value=1143>1143</option>
+				</select>
 			</div>
 			
 			<div style="float:left;margin-right:20px;text-align:center">
 				<label for="oldname">Old name</label><br>
-				<input type="text" id="oldname" name="oldname">
+				<input type="text" id="oldname" name="oldname" readonly value="">
 			</div>
 			
 			<div style="float:left;margin-right:20px;text-align:center">
