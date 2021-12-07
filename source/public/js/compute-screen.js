@@ -73,6 +73,11 @@ class ComputeScreen {
         this.startdate = this.startdateInput.value;
         this.enddate = this.enddateInput.value;
         this.station = this.stationInput.value;
+        
+        this.enddateInput.min = this.startdate;
+        if (this.enddateInput.value < this.enddateInput.min) {
+            this.enddateInput.value = this.enddateInput.min;
+        }
     }
 
     async _loadStationNames() {
