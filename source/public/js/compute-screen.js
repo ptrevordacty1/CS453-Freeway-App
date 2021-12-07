@@ -60,12 +60,13 @@ class ComputeScreen {
         
         // Update outputs
         this.traveltimeOutput.readOnly = false;
-        this.traveltimeOutput.value = json.traveltime + " s";
+        this.traveltimeOutput.value = Math.round(json.traveltime * 100) / 100 + " s";
         this.traveltimeOutput.readOnly = true;
         
         this.volumeOutput.readOnly = false;
         this.volumeOutput.value = json.volume;
         this.volumeOutput.readOnly = true;
+       
     }
 
     _saveInputs() {
