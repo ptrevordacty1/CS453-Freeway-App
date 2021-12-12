@@ -12,7 +12,8 @@
 # Setting up the MongoDB database
 Extract files from ```ProjectData-2018.zip```.
 Remove all carriage return (\r) characters from ```freeway_detectors.csv```, ```freeway_stations.csv```, and ```highways/csv```.
-run the following commands from the 'source' directory:
+
+Run the following commands from the 'source' directory:
 
 1. mongoimport --host=127.0.0.1 --db freeway_data --collection freeway_loopdata --drop --type=csv --headerline --ignoreBlanks --file ../ProjectData-2018/ProjectData-2017/freeway_loopdata.csv
 (^this one will take a while, the file is very large)
