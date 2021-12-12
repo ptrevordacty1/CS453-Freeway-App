@@ -10,7 +10,7 @@
 5. Open a browser go to "localhost:3000"
 
 # Setting up the MongoDB database
-Extract flies from ```ProjectData-2018.zip```.
+Extract files from ```ProjectData-2018.zip```.
 Remove all carriage return (\r) characters from ```freeway_detectors.csv```, ```freeway_stations.csv```, and ```highways/csv```.
 run the following commands from the 'source' directory:
 
